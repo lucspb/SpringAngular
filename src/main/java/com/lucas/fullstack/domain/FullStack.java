@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 
 
 @Entity
-public class Todo implements Serializable{
+public class FullStack implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -24,12 +24,12 @@ public class Todo implements Serializable{
 	private LocalDateTime dataParaFinalizar;
 	private boolean finalizado = false;
 
-	public Todo() {
+	public FullStack() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Todo(Integer id, String titulo, String descricao, LocalDateTime dataParaFinalizar, boolean finalizado) {
+	public FullStack(Integer id, String titulo, String descricao, LocalDateTime dataParaFinalizar, boolean finalizado) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -91,7 +91,7 @@ public class Todo implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Todo other = (Todo) obj;
+		FullStack other = (FullStack) obj;
 		return Objects.equals(id, other.id);
 	}
 

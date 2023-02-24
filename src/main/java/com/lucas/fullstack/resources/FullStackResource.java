@@ -38,6 +38,12 @@ public class FullStackResource {
 		List<FullStack> list = service.findAllClose();
 		return ResponseEntity.ok().body(list);
 	}
+	
+	@GetMapping
+	public ResponseEntity<List<FullStack>> listAll(){
+		List<FullStack> list = service.findAll();
+		return ResponseEntity.ok().body(list);
+	}
 }
 
 

@@ -29,6 +29,11 @@ public class FullStackService {
 		List<FullStack> list = repository.findAllClose();
 		return list;
 	}
+
+	public List<FullStack> findAll() {
+		List<FullStack> list = repository.findAll();
+		return list;
+	}
 	
 	
 

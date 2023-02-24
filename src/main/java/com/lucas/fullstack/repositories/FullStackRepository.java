@@ -14,4 +14,7 @@ public interface FullStackRepository extends JpaRepository<FullStack, Integer>{
 	@Query("SELECT obj FROM FullStack obj WHERE obj.finalizado = false ORDER BY obj.dataParaFinalizar")
 	List<FullStack> findAllOpen();
 
+	@Query("SELECT obj FROM FullStack obj WHERE obj.finalizado = true ORDER BY obj.dataParaFinalizar")
+	List<FullStack> findAllClose();
+
 }

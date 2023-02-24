@@ -32,8 +32,12 @@ public class FullStackResource {
 		List<FullStack> list = service.findAllOpen();
 		return ResponseEntity.ok().body(list);
 	}
-
 	
+	@GetMapping(value = "/close")
+	public ResponseEntity<List<FullStack>> listClose(){
+		List<FullStack> list = service.findAllClose();
+		return ResponseEntity.ok().body(list);
+	}
 }
 
 

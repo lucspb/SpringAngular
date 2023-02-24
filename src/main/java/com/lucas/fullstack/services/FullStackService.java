@@ -1,5 +1,6 @@
 package com.lucas.fullstack.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,11 @@ public class FullStackService {
 	public FullStack findById(int id) {
 		Optional<FullStack> obj = repository.findById(id);
 		return obj.orElse(null);
+	}
+
+	public List<FullStack> findAllOpen() {
+		List<FullStack> list = repository.findAllOpen();
+		return list;
 	}
 	
 	

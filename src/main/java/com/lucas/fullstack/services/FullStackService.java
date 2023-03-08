@@ -34,6 +34,16 @@ public class FullStackService {
 		List<FullStack> list = repository.findAll();
 		return list;
 	}
+
+	public FullStack create(FullStack obj) {
+		obj.setId(null);
+		return repository.save(obj);
+	}
+
+	public void delete(Integer id) {
+		repository.deleteById(id);
+		
+	}
 	
 	
 
